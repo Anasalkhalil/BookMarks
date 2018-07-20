@@ -26,3 +26,23 @@ function saveBookmark(e){
     }
     e.preventDefault();
 }
+
+function fetchBookmarks(){
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    console.log(bookmarks);
+    var bookmarksResult = document.getElementById('bookmarksResult');
+    bookmarksResult.innerHTML = '';
+
+    for(var i=0; i< bookmarks.length ; i++){
+        var name = bookmarks[i].name;
+        var value = bookmarks[i].value;
+
+        bookmarksResult.innerHTML += '<div class="well">' +
+                                     '<h3>'+ name + '</h3>' +
+                                     '<a class = "btn btn-danger" target="_blank" href="'+ value +'">' +
+                                     'Visit' + 
+                                     '</a>'
+                                     '</div>';
+    }
+    
+}
