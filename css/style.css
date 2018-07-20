@@ -1,0 +1,11 @@
+.well{
+    background: #e9ecef;
+    margin: 10px 0;
+    padding: 25px;
+    border-radius: 5px;
+    
+}
+.well h3{
+    float: left;
+    padding-right: 4px;
+}
